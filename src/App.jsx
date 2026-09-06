@@ -1,19 +1,35 @@
-import {useState} from "react";
-import Count from "./Count"
+import './App.css'
 
-function App(){
-  const [fruit , setFruit] = useState("Apple");
+import {User} from './User.jsx'
 
-  const handleFruit=()=>{
-    setFruit("Orange");
+function App() {
+
+  let clge=['BMSIT','RVCE','PESIT','MSRIT']
+
+  let userObj1 = {
+    name:"Phipoli",
+    age:"12",
+    mail:"p@gmail.com",
   }
 
-  return(
+  let userObj2 = {
+    name:"Phipoli2",
+    age:"13",
+    mail:"p2@gmail.com"
+  }
+
+  let userObj3 = {
+    name:"Phipoli3",
+    age:"14",
+    mail:"p3@gmail.com"
+  }
+
+  return (
     <>
-    <h1>Welcome to React</h1>
-    <h2>My favorite fruit is {fruit}</h2>
-    <button onClick={handleFruit}>Change Fruit</button>
-    <Count/>
+      <h1>Props Learning!!</h1>
+      <User user = {userObj1}/>
+      <User user = {userObj2}/>
+      <User user = {userObj3}/>
     </>
   )
 }
